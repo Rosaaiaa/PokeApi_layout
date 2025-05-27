@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+    <string name="digite_o_nome_do_pok_mon">Digite o nome do Pokémon</string>
+    <string name="buscar_pok_mon">Buscar Pokémon</string>
+    <string name="imagem_do_pok_mon">Imagem do Pokémon</string>
+    <string name="resultado_aparecer_aqui">Resultado aparecerá aqui</string>
+</resources>
