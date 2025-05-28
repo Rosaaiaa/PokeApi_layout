@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="botao">#805F04</color>
+    <color name="textbotao">#EFCD7F</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="FundoPokemon">#D8C8A453</color>
+    <color name="FundoPokemon">#D8B48C32</color>
+    <color name="fundocx">#DCC67A</color>
 </resources>

@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/fundopokeapi"
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <!-- CAMPO DE BUSCA -->
     <EditText
         android:id="@+id/EditPokemon"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/digite_o_nome_do_pok_mon"
         android:inputType="text"
-        android:layout_marginBottom="12dp"
+        android:textColor="@color/ic_launcher_background"
         android:padding="12dp"
-        android:background="@android:drawable/edit_text" />
+        android:background="@color/fundocx"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_marginTop="48dp"/>
 
+    <!-- BOTÃO -->
     <Button
         android:id="@+id/BuscarPokemon"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/buscar_pok_mon"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="@color/black"
-        android:textColor="@android:color/white" />
+        android:backgroundTint="@color/botao"
+        android:textColor="@color/textbotao"
+        app:layout_constraintTop_toBottomOf="@id/EditPokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_marginTop="12dp" />
 
+    <!-- IMAGEM -->
     <ImageView
         android:id="@+id/imgPokemon"
         android:layout_width="200dp"
@@ -37,16 +49,24 @@
         android:contentDescription="@string/imagem_do_pok_mon"
         android:scaleType="fitCenter"
         android:background="@color/FundoPokemon"
-        android:layout_gravity="center"/>
+        app:layout_constraintTop_toBottomOf="@id/BuscarPokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- RESULTADO -->
     <TextView
         android:id="@+id/Resultado"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/resultado_aparecer_aqui"
         android:textSize="16sp"
         android:padding="12dp"
-        android:background="#EFEFEF"
-        android:textColor="#000000" />
+        android:background="#E2CCB2"
+        android:textColor="#3C1F00"
+        app:layout_constraintTop_toBottomOf="@id/imgPokemon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
